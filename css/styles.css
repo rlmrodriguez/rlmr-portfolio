@@ -39,14 +39,12 @@ html {
   height: 60px;
   width: 100%;
   background-color: #0a192f;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .sidebar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,11 +58,11 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  max-width: 400px;
+  width: 250px;
   height: 100%;
   background-color: #112240;
-  border: 1px solid pink;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .navbar__links {
@@ -111,8 +109,8 @@ html {
 }
 
 .navbar__logo {
-  position: fixed;
-  top: 1.5rem;
+  position: absolute;
+  top: 1rem;
   left: 1.5rem;
   padding: 0.25rem;
   border: 2px solid #64ffda;
@@ -688,7 +686,7 @@ html {
   .about,
   .projects,
   .contact {
-    padding: 2.5rem 1.3rem;
+    padding: 5rem 1.3rem;
   }
   .header__text {
     padding-left: 1.5rem;
@@ -825,28 +823,30 @@ html {
     font-size: 1.1rem;
   }
   .navbar {
-    width: 100%;
-    height: 100px;
-    min-height: auto;
     font-size: 0.8rem;
-    background-color: #0a192f;
+    background-color: transparent;
   }
   .navbar__items {
-    height: 100%;
+    width: 100%;
   }
   .sidebar-btn {
     visibility: hidden;
   }
   .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 2rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 100%;
+    height: 80px;
     width: 100%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    background-color: #0a192f;
   }
   .navbar__links {
     -webkit-box-orient: horizontal;
