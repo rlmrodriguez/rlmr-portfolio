@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap");
 * {
@@ -28,23 +27,26 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  overflow: hidden;
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
-  right: 0;
+  top: 0;
   z-index: 9999;
-  min-height: 100vh;
-  width: 60%;
-  background-color: #112240;
+  height: 60px;
+  width: 100%;
+  background-color: #0a192f;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.navbar__items {
-  width: 100%;
-}
-
 .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,6 +61,10 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: #112240;
+  border: 1px solid pink;
 }
 
 .navbar__links {
@@ -113,6 +119,7 @@ html {
   letter-spacing: 0.1rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 9999999;
 }
 
 .navbar__logo a {
@@ -302,7 +309,7 @@ html {
 }
 
 .about__text ul li::before {
-  content: '◀️▶️ ';
+  content: '> ';
   font-size: 0.7rem;
   margin-right: 0.5rem;
   color: #64ffda;
@@ -323,7 +330,7 @@ html {
   margin: 2rem auto 0;
   position: relative;
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 .about__img-container::before {
@@ -677,6 +684,142 @@ html {
 }
 
 /* Media Queries */
+@media (max-width: 480px) {
+  .about,
+  .projects,
+  .contact {
+    padding: 2.5rem 1.3rem;
+  }
+  .header__text {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about {
+    padding-bottom: 0;
+  }
+  .about__img {
+    width: 250px;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top center;
+       object-position: top center;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+  .about__img-container {
+    margin: 2rem auto 0;
+    position: relative;
+    width: 250px;
+    height: 350px;
+  }
+  .about__img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(100, 255, 218, 0.5);
+    mix-blend-mode: screen;
+    border-radius: 0.5rem;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .about__img-container:hover::before {
+    background-color: transparent;
+  }
+  .about__img-container::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: -1;
+    display: block;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #64ffda;
+    border-radius: 0.5rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .about__img-container:hover::after {
+    top: 15px;
+    left: 15px;
+  }
+  .card-techs ul li {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 0.9rem;
+  }
+  .about__img {
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top center;
+       object-position: top center;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+  .about__img-container {
+    margin: 2rem auto 0;
+    position: relative;
+    width: 200px;
+    height: 350px;
+  }
+  .about__img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(100, 255, 218, 0.5);
+    mix-blend-mode: screen;
+    border-radius: 0.5rem;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .about__img-container:hover::before {
+    background-color: transparent;
+  }
+  .about__img-container::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: -1;
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #64ffda;
+    border-radius: 0.5rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .about__img-container:hover::after {
+    top: 15px;
+    left: 15px;
+  }
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 1.1rem;
