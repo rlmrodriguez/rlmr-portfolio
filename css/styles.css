@@ -1,0 +1,760 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a192f;
+  color: #8892b0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  right: 0;
+  z-index: 9999;
+  min-height: 100vh;
+  width: 60%;
+  background-color: #112240;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navbar__items {
+  width: 100%;
+}
+
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.navbar__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 30vh;
+  margin-bottom: 5rem;
+}
+
+.navbar__links li {
+  position: relative;
+}
+
+.navbar__links .navbar__link::before {
+  content: attr(data-number);
+  position: absolute;
+  display: block;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #64ffda;
+}
+
+.navbar__links .navbar__link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #8892b0;
+}
+
+.navbar__links .navbar__link:hover {
+  color: #64ffda;
+}
+
+.navbar__logo {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.25rem;
+  border: 2px solid #64ffda;
+  letter-spacing: 0.1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar__logo a {
+  color: #64ffda;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar__logo:hover {
+  background-color: rgba(100, 255, 218, 0.2);
+}
+
+.resume-btn {
+  padding: 0.5rem 1.2rem;
+  border-color: #64ffda;
+  color: #64ffda;
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 0.1rem;
+}
+
+.resume-btn:hover {
+  background-color: rgba(100, 255, 218, 0.2);
+  border-color: #64ffda;
+  color: #64ffda;
+}
+
+.sidebar-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: auto;
+  margin: 1.5rem 1.3rem;
+  cursor: pointer;
+}
+
+.sidebar-btn span {
+  display: block;
+  height: 4px;
+  margin-bottom: 0.3rem;
+  border-radius: 5px;
+  background-color: #64ffda;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.sidebar-btn span:nth-child(1),
+.sidebar-btn span:nth-child(3) {
+  width: 100%;
+}
+
+.sidebar-btn span:nth-child(2) {
+  width: 70%;
+}
+
+.sidebar-btn.active span:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateY(6px);
+          transform: rotate(45deg) translateY(6px);
+}
+
+.sidebar-btn.active span:nth-child(2) {
+  display: none;
+}
+
+.sidebar-btn.active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translateY(-6px);
+          transform: rotate(-45deg) translateY(-6px);
+}
+
+/* Header */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding: 0 3rem;
+}
+
+.header h4 {
+  color: #64ffda;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  padding-bottom: 0.6rem;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ccd6f6;
+}
+
+.header h2:nth-of-type(2) {
+  font-size: 2.3rem;
+  color: #8892b0;
+}
+
+.header p {
+  max-width: 500px;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.header__cta {
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  border-color: #64ffda;
+  color: #64ffda;
+  background-color: transparent;
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 0.1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__cta:hover {
+  background-color: rgba(100, 255, 218, 0.2);
+  border-color: #64ffda;
+  color: #64ffda;
+}
+
+/* About */
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+}
+
+.about__text {
+  font-size: 1.1rem;
+}
+
+.about__text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+  font-weight: bold;
+  color: #ccd6f6;
+}
+
+.about__text h3::after {
+  content: '';
+  position: relative;
+  top: -15px;
+  left: 12rem;
+  display: block;
+  width: 150px;
+  height: 1px;
+  background-color: #8892b0;
+}
+
+.about__text h3 span {
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  display: inline-block;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  padding-right: 1rem;
+  color: #64ffda;
+}
+
+.about__text p {
+  font-size: 1rem;
+}
+
+.about__text ul li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+}
+
+.about__text ul li::before {
+  content: '◀️▶️ ';
+  font-size: 0.7rem;
+  margin-right: 0.5rem;
+  color: #64ffda;
+}
+
+.about__img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.about__img-container {
+  margin: 2rem auto 0;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.about__img-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(100, 255, 218, 0.5);
+  mix-blend-mode: screen;
+  border-radius: 0.5rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about__img-container:hover::before {
+  background-color: transparent;
+}
+
+.about__img-container::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: -1;
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #64ffda;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about__img-container:hover::after {
+  top: 15px;
+  left: 15px;
+}
+
+/* Projects */
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+}
+
+.projects__text {
+  font-size: 1.1rem;
+}
+
+.projects__text h3 {
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ccd6f6;
+}
+
+.projects__text h3::after {
+  content: '';
+  position: relative;
+  top: -15px;
+  left: 19rem;
+  display: block;
+  width: 150px;
+  height: 1px;
+  background-color: #8892b0;
+}
+
+.projects__text h3 span {
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  display: inline-block;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  padding-right: 1rem;
+  color: #64ffda;
+}
+
+.projects__text p {
+  font-size: 1rem;
+}
+
+.card {
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card-img-top:hover,
+.card-img-top:active {
+  opacity: 0;
+}
+
+.card img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card-title {
+  color: #ccd6f6;
+  font-weight: bold;
+}
+
+.card-body {
+  background-color: #112240;
+  -webkit-box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+          box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  position: relative;
+}
+
+.card-techs ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.card-techs ul li {
+  padding-top: 0.5rem;
+  padding-right: 2rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #64ffda;
+}
+
+.card-links {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.card-links a i {
+  font-size: 1.5rem;
+  color: #8892b0;
+  margin-left: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card-links a i:hover {
+  color: #64ffda;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+  min-height: 40vh;
+  padding: 5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__text {
+  font-size: 1.2rem;
+}
+
+.contact__text h4 {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  color: #64ffda;
+  font-family: 'Fira Code', monospace;
+}
+
+.contact__text h4 span {
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  display: inline-block;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  padding-right: 1rem;
+  color: #64ffda;
+}
+
+.contact__text h2 {
+  color: #ccd6f6;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.contact__text p {
+  font-size: 1rem;
+}
+
+.contact__cta {
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  border-color: #64ffda;
+  color: #64ffda;
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 0.1rem;
+}
+
+.contact__cta:hover {
+  background-color: rgba(100, 255, 218, 0.2);
+  border-color: #64ffda;
+  color: #64ffda;
+}
+
+/* Footer */
+.footer {
+  min-height: 70px;
+}
+
+.social-media a i {
+  font-size: 2rem;
+  padding: 0 1rem 0.5rem;
+  color: #8892b0;
+}
+
+.social-media a i:hover {
+  color: #64ffda;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.footer__text p {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  font-family: 'Fira Code', monospace;
+  position: relative;
+}
+
+.footer__text p::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 250px;
+  height: 1px;
+  background-color: #8892b0;
+}
+
+.side-social-media {
+  position: fixed;
+  bottom: 0;
+  left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+
+.side-social-media::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0 auto;
+  background-color: #8892b0;
+}
+
+.side-social-media a i {
+  margin-bottom: 0.7rem;
+  color: #8892b0;
+  font-size: 1.2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.side-social-media a i:hover {
+  color: #64ffda;
+  -webkit-transform: translateY(-5px) scale(1.05);
+          transform: translateY(-5px) scale(1.05);
+  cursor: nw-resize;
+}
+
+.side-email {
+  position: fixed;
+  bottom: 0;
+  right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+
+.side-email::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 90px;
+  margin: 0 auto;
+  background-color: #8892b0;
+}
+
+.side-email a {
+  font-family: 'Fire Code', monospace;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  color: #8892b0;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.side-email a:hover {
+  color: #64ffda;
+  -webkit-transform: translateY(-5px) scale(1.05);
+          transform: translateY(-5px) scale(1.05);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  html {
+    font-size: 1.1rem;
+  }
+  .navbar {
+    width: 100%;
+    height: 100px;
+    min-height: auto;
+    font-size: 0.8rem;
+    background-color: #0a192f;
+  }
+  .navbar__items {
+    height: 100%;
+  }
+  .sidebar-btn {
+    visibility: hidden;
+  }
+  .sidebar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .navbar__links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  .navbar__links .navbar__link {
+    margin-right: 3rem;
+  }
+  .navbar__links .navbar__link::before {
+    content: none;
+  }
+  .navbar__links .navbar__link::after {
+    content: attr(data-number);
+    position: absolute;
+    left: -35px;
+    color: #64ffda;
+  }
+  .resume-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .resume-btn a {
+    color: #ccd6f6;
+    text-decoration: none;
+  }
+  .social-media {
+    visibility: hidden;
+  }
+  .side-social-media {
+    visibility: visible;
+  }
+  .side-email {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 991px) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
