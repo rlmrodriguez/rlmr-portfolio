@@ -63,6 +63,10 @@ html {
   height: 100%;
   background-color: $bg-color-alt;
   transition: 0.4s;
+
+  &.active {
+    right: 0;
+  }
 }
 
 .navbar__links {
@@ -751,10 +755,6 @@ html {
   .navbar {
     font-size: 0.8rem;
     background-color: transparent;
-
-    &__items {
-      width: 100%;
-    }
   }
   .sidebar-btn {
     visibility: hidden;

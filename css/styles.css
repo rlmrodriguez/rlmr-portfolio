@@ -65,6 +65,10 @@ html {
   transition: 0.4s;
 }
 
+.sidebar.active {
+  right: 0;
+}
+
 .navbar__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -829,9 +833,6 @@ html {
   .navbar {
     font-size: 0.8rem;
     background-color: transparent;
-  }
-  .navbar__items {
-    width: 100%;
   }
   .sidebar-btn {
     visibility: hidden;
