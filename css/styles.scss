@@ -22,6 +22,7 @@ body {
   background-color: $bg-color;
   color: $font-color;
   font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 a {
@@ -189,6 +190,7 @@ html {
   align-items: center;
   min-height: 100vh;
   padding: 0 3rem;
+  // margin-top: 5rem;
 
   h4 {
     color: $secondary;
@@ -198,7 +200,7 @@ html {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: $font-color-alt;
   }
@@ -212,6 +214,7 @@ html {
     max-width: 500px;
     margin-bottom: 0.3rem;
     font-size: $paragraph-text-size;
+    letter-spacing: 0.5px;
   }
 
   &__cta {
@@ -749,7 +752,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .navbar {
@@ -818,12 +821,16 @@ html {
 
 @media (min-width: 991px) {
   html {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+  }
+
+  .card-techs ul li {
+    font-size: 0.65rem;
   }
 }
 
 @media (min-width: 1200px) {
   html {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }

@@ -11,6 +11,7 @@ body {
   background-color: #0a192f;
   color: #8892b0;
   font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 a {
@@ -219,7 +220,7 @@ html {
 }
 
 .header h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #ccd6f6;
 }
@@ -233,6 +234,7 @@ html {
   max-width: 500px;
   margin-bottom: 0.3rem;
   font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .header__cta {
@@ -828,7 +830,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .navbar {
     font-size: 0.8rem;
@@ -896,13 +898,16 @@ html {
 
 @media (min-width: 991px) {
   html {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+  }
+  .card-techs ul li {
+    font-size: 0.65rem;
   }
 }
 
 @media (min-width: 1200px) {
   html {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
