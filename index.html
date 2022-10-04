@@ -1,266 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet">
+    <link rel='shortcut icon' href='./assets/images/favicon.ico' type='image/x-icon'>
+    <link rel='stylesheet' href='./css/styles.css'>
+    <script defer src='./script.js'></script>
+    <title>RL Rodriguez</title>
+  </head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" />
-
-  <link rel='shortcut icon' href='./images/favicon.ico' type='image/x-icon'>
-  <link rel='stylesheet' href='./css/styles.css'>
-
-  <title>RL Rodriguez</title>
-</head>
-
-<body>
-  <!-- Navbar -->
-  <nav class='navbar' id='navbar'>
-    <div class='navbar__logo'>
-      <a href='#' class='logo'>RL</a>
-    </div>
-    <div class='sidebar' id='sidebar'>
-      <ul class='navbar__links' id='navMenu'>
-        <li><a href='#about' class='navbar__link' data-number='01.'>About</a></li>
-        <li><a href='#projects' class='navbar__link' data-number='02.'>Projects</a></li>
-        <li><a href='#contact' class='navbar__link' data-number='03.'>Contact</a></li>
-      </ul>
-      <button class='resume-btn btn' id='resumeBtn'><a href='./Roden Leo Rodriguez CV.pdf''>Resume</a></button>
+  <body>
+    <!-- Navbar -->
+    <nav class='navbar' id='navbar'>
+      <div class='navbar__logo'>
+        <a href='#' class='logo'>RL</a>
+      </div>
+      <div class='sidebar' id='sidebar'>
+        <ul class='navbar__links' id='navMenu'>
+          <li><a href='#about' class='navbar__link' data-number='01.'>About</a></li>
+          <li><a href='#projects' class='navbar__link' data-number='02.'>Projects</a></li>
+          <li><a href='#contact' class='navbar__link' data-number='03.'>Contact</a></li>
+        </ul>
+        <button class='resume-btn btn' id='resumeBtn'><a href='./assets/Roden Leo M. Rodriguez - Resume.pdf''>RESUME</a></button>
       </div>
       <div class=' sidebar-btn' id='sidebarBtn'>
-          <span></span>
-          <span></span>
-          <span></span>
-    </div>
-  </nav>
-
-  <!-- Header -->
-  <header class='header container'>
-    <div class='row'>
-      <div class='col-sm-12'>
-        <div class='header__text'>
-          <h4> &gt; Hi, my name is</h4>
-          <h2>Roden Rodriguez.</h2>
-          <h2>I create & build stuff for the web.</h2>
-          <p>I'm a career shifter - an Agricultural Engineer by trade and a Web Developer by heart.
-            Right now, I am looking for an opportunity to improve my coding skills and to learn more about the web and
-            its technologies.</p>
-          <a href='mailto:roden.mrodriguez@gmail.com' role='button' class='btn header__cta'>Get In Touch</a>
-        </div>
+            <span></span>
+            <span></span>
+            <span></span>
       </div>
-    </div>
-  </header>
+    </nav>
 
-  <!-- About -->
-  <section class='about' id='about'>
-    <div class='container'>
+    <!-- Header -->
+    <header class='header container'>
       <div class='row'>
-        <div class='col-12 col-md-12 col-lg-6 about__text'>
-          <h3><span>01. </span>About Me</h3>
-          <p>Hi! I'm Roden, an aspiring Web Developer. My interest in coding started when I was
-            still in college. I have a Bachelor's Degree in Agricultural Engineering and I got my professional license
-            in 2012. I've always been fascinated with things that I can tinker with and build, which is why when I had
-            a
-            glimpse of what web technologies can do, I got hooked in an instant.
-          </p>
-          <p>Fast forward 8 years, I've decided to take a leap of fate and pursue web development - one line of code at
-            a time starting with Front-End. At the moment, I'm planning to work my way towards learning React while
-            getting familiar with Node.js and PHP/Laravel. Ultimately, my goal is to be a Full-Stack Developer. </p>
-          <p>Here are some technologies that I've been working on recently:</p>
-          <ul class='row'>
-            <div class='col-4'>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </div>
-            <div class='col-4 '>
-              <li>SASS</li>
-              <li>Figma</li>
-              <li>Bootstrap</li>
-            </div>
-          </ul>
-        </div>
-        <div class='col-12 col-md-12 col-lg-6'>
-          <div class='about__img-container'>
-            <img src='./images/rlmr.png' alt='photo of rlmr' class='about__img'>
+        <div class='col-sm-12 pt-5'>
+          <div class='header__text'>
+            <span class="pt-4"> &gt; Hi, my name is</span>
+            <h2>Roden Rodriguez.</h2>
+            <h2>I create & build stuff for the web.</h2>
+            <p>I'm a career shifter - an Agricultural Engineer by trade and a Web Developer by heart.
+              Right now, I am looking for an opportunity to improve my coding skills and to learn more about the web and
+              its technologies.</p>
+            <a href='mailto:roden.mrodriguez@gmail.com' role='button' class='btn header__cta'>Get In Touch</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Projects -->
-  <section class='projects' id='projects'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-12 projects__text'>
-          <h3><span>02. </span>Personal Projects</h3>
+    <!-- About -->
+    <section class='about' id='about'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12 col-md-12 col-lg-6 about__text'>
+            <h3><span>01. </span>About Me</h3>
+            <p>Hello again! I'm Roden, an aspiring Web Developer. My interest in coding started when I was
+              still in college. I've always been fascinated with things that I can tinker with and build, which is why
+              when I had
+              a
+              glimpse of what web technologies can do, I got hooked in an instant.
+            </p>
+            <p>Fast forward 10 years, I've decided to take a leap of fate and pursue web development - one line of code
+              at
+              a time, starting with Front-End. At the moment, I'm planning to work my way towards learning ReactJS and
+              eventually complete the MERN stack. Ultimately, my goal is to be a Full-Stack and/or Blockchain Developer.
+            </p>
+            <p>Here are some technologies that I've been working on recently:</p>
+            <ul class='row'>
+              <div class='col-4'>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </div>
+              <div class='col-4 '>
+                <li>ReactJS</li>
+                <li>Bootstrap</li>
+                <li>Tailwind</li>
+              </div>
+              <div class='col-4 '>
+                <li>SASS</li>
+                <li>Figma</li>
+                <li>Git</li>
+              </div>
+            </ul>
+          </div>
+          <div class='col-12 col-md-12 col-lg-6'>
+            <div class='about__img-container'>
+              <img src='./assets/images/rlmr.png' alt='' class='about__img' aria-hidden="true" loading="lazy"
+                decoding="async">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col-lg-6 mx-auto mb-4">
-          <div class="card h-100">
-            <img src="./images/tngo-orig.jpg" class="card-img-top" alt="">
-            <img src="./images/tngo-layered.jpg" class="card-img-top" alt="travel & go website">
-            <div class="card-body">
-              <h5 class="card-title">Travel & Go</h5>
-              <p class="card-text">This simple website was made with JS, HTML and CSS. Here,
-                I experimented with CSS animations and used a desktop-first approach in the design. The theme was
-                heavily inspired by
-                my love for traveling here in the Philippines.</p>
-              <div class='card-techs'>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-              <div class='card-links'>
-                <a href='https://github.com/rlmrodriguez/travel-n-go' target='_blank'><i class='fab fa-github'></i></a>
-                <a href='https://rlmrodriguez.github.io/travel-n-go/' target='_blank'><i
-                    class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
+    </section>
+
+    <!-- Projects -->
+    <section class='projects' id='projects'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12 projects__text'>
+            <h3><span>02. </span>Personal Projects</h3>
           </div>
         </div>
-        <div class="col-lg-6 mx-auto mb-4">
-          <div class="card h-100">
-            <img src="./images/cb-orig.jpg" class="card-img-top" alt="">
-            <img src="./images/cb-layered.jpg" class="card-img-top" alt="cake buddies website">
-            <div class="card-body">
-              <h5 class="card-title">Cake Buddies</h5>
-              <p class="card-text">I built this website using JS, HTML, CSS while relying
-                on Owl Carousel to show and organize images, and Bootstrap to make it responsive. I
-                used a color scheme composed of white, black and pink tones to achieve a modern look.</p>
-              <div class='card-techs'>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>Owl Carousel</li>
-                </ul>
+        <div class="row row-cols-1 row-cols-lg-2">
+          <!-- Card 1 -->
+          <div class="col-sm-9 col-md-7 col-lg-6 mx-auto mb-4 card-container hidden">
+            <div class="card h-80">
+              <div class="img-wrapper">
+                <img src="./assets/images/travelngo-700.png" class="card-img" alt="" aria-hidden="true" loading="lazy"
+                  decoding="async">
               </div>
-              <div class='card-links'>
-                <a href='https://github.com/rlmrodriguez/cake-buddies' target='_blank'><i class='fab fa-github'></i></a>
-                <a href='https://rlmrodriguez.github.io/cake-buddies/' target='_blank'><i
-                    class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 mx-auto mb-4">
-          <div class="card h-100">
-            <img src="./images/barik-orig.jpg" class="card-img-top" alt="">
-            <img src="./images/barik-layered.jpg" class="card-img-top" alt="barik ph website">
-            <div class="card-body">
-              <h5 class="card-title">Barik PH</h5>
-              <p class="card-text">This website for craft beers was made with JS, HTML and CSS. I used a JS library
-                called ScrollReveal pull off the smooth on-scroll page animations. Also, here I learned how awesome
-                CSS
-                Grid
-                is for mobile-first designs.</p>
-              <div class='card-techs'>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>ScrollReveal</li>
-                </ul>
-              </div>
-              <div class='card-links'>
-                <a href='https://github.com/rlmrodriguez/barik-ph' target='_blank'><i class='fab fa-github'></i></a>
-                <a href='https://rlmrodriguez.github.io/barik-ph/' target='_blank'><i
-                    class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 mx-auto mb-4">
-          <div class="card h-100">
-            <img src="./images/pomodoro-orig.png" class="card-img-top" alt="">
-            <img src="./images/pomodoro-layered.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">The Pomodoro</h5>
-              <p class="card-text">So here's another Pomodoro Timer App made with vanilla JS. I found this app
-                extremely
-                useful to me whenever I want to be in the "in the zone" mindset. Who would've thought that
-                Glassmorphism
-                and tomatoes go together?</p>
-              <div class='card-techs'>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
+              <div class="card-body">
+                <h5 class="card-title">Travel & Go</h5>
+                <p class="card-text">This simple website was made with JS, HTML and CSS. I experimented with CSS
+                  animations and coded using a mobile-first approach. The theme was
+                  heavily inspired by
+                  my love for traveling here in PH.</p>
+                <div class='card-techs'>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
                 <div class='card-links'>
-                  <a href='https://github.com/rlmrodriguez/the-pomodoro' target='_blank'><i
+                  <a href='https://github.com/rlmrodriguez/travel-n-go' target='_blank'><i
                       class='fab fa-github'></i></a>
-                  <a href='https://rlmrodriguez.github.io/the-pomodoro/' target='_blank'><i
+                  <a href='https://rlmrodriguez.github.io/travel-n-go/' target='_blank'><i
+                      class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-sm-9 col-md-7 col-lg-6 mx-auto mb-4 card-container hidden">
+            <div class="card h-80">
+              <div class="img-wrapper">
+                <img src="./assets/images/pokematch-em-700.png" class="card-img" alt="" aria-hidden="true"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">PokéMatch ém</h5>
+                <p class="card-text">A Pokémon-inspired memory game with 3 difficulty levels and hi-score tracking. I
+                  made this simple app for fun (and to keep my kid busy). I'm planning to include a "Time Attack Mode"
+                  in the future.</p>
+                <div class='card-techs'>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class='card-links'>
+                  <a href='https://github.com/rlmrodriguez/pokematchem/' target='_blank'><i
+                      class='fab fa-github'></i></a>
+                  <a href='https://rlmrodriguez.github.io/pokematchem/' target='_blank'><i
+                      class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-sm-9 col-md-7 col-lg-6 mx-auto mb-4 card-container hidden">
+            <div class="card h-80">
+              <div class="img-wrapper">
+                <img src="./assets/images/pomodo-it-700.png" class="card-img" alt="" aria-hidden="true" loading="lazy"
+                  decoding="async">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Pomo-do It!</h5>
+                <p class="card-text">A pomodoro timer with minimalist design and an option to adjust the timer based on
+                  the user's preferences. I also added a quote generator (w/ external API) for "extra" motivation.</p>
+                <div class='card-techs'>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>ReactJS</li>
+
+                  </ul>
+                </div>
+                <div class='card-links'>
+                  <a href='https://github.com/rlmrodriguez/pomodo-it' target='_blank'><i class='fab fa-github'></i></a>
+                  <a href='https://rlmrodriguez.github.io/pomodo-it/' target='_blank'><i
+                      class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-sm-9 col-md-7 col-lg-6 mx-auto mb-4 card-container hidden">
+            <div class="card h-80">
+              <div class="img-wrapper">
+                <img src="./assets/images/langio-700.png" class="card-img" alt="" aria-hidden="true" loading="lazy"
+                  decoding="async">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Lang.io</h5>
+                <p class="card-text">This is the first website I made with Tailwind CSS. It was tricky to get started
+                  but I liked how it gave me complete freedom to design the website using minimal CSS code. I'll use
+                  this again with ReactJS.</p>
+                <div class='card-techs'>
+                  <ul>
+                    <li>HTML</li>
+                    <li>Tailwind</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class='card-links'>
+                  <a href='https://github.com/rlmrodriguez/lang.io' target='_blank'><i class='fab fa-github'></i></a>
+                  <a href='https://rlmrodriguez.github.io/lang.io/' target='_blank'><i
+                      class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="col-sm-9 col-md-7 col-lg-6 mx-auto mb-4 card-container hidden">
+            <div class="card h-80">
+              <div class="img-wrapper">
+                <img src="./assets/images/pny-700.png" class="card-img" alt="" aria-hidden="true" loading="lazy"
+                  decoding="async">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">PNY</h5>
+                <p class="card-text">By far, this is the longest static website that I built from scratch. This is made
+                  with
+                  vanilla JS, HTML, CSS and Swiper to add a little flair to the portfolio section. The button animation
+                  is nice-looking too.</p>
+                <div class='card-techs'>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class='card-links'>
+                  <a href='https://github.com/rlmrodriguez/pny/' target='_blank'><i class='fab fa-github'></i></a>
+                  <a href='https://rlmrodriguez.github.io/pny/' target='_blank'><i
+                      class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="col-sm-9 col-md-7 col-lg-6 mx-auto mb-4 card-container hidden">
+            <div class="card h-80">
+              <div class="img-wrapper">
+                <img src="./assets/images/cake-buddies-700.png" class="card-img" alt="" aria-hidden="true"
+                  loading="lazy" decoding="async">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Cake Buddies</h5>
+                <p class="card-text">I used Bootstrap to cover the responsiveness and Owl Carousel to organize
+                  images, then picked a color scheme composed of white, black and pink tones to achieve a modern look.
+                </p>
+                <div class='card-techs'>
+                  <ul>
+                    <li>HTML</li>
+                    <li>Bootstrap</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class='card-links'>
+                  <a href='https://github.com/rlmrodriguez/cake-buddies' target='_blank'><i
+                      class='fab fa-github'></i></a>
+                  <a href='https://rlmrodriguez.github.io/cake-buddies/' target='_blank'><i
+                      class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="col-sm-9 col-md-7 col-lg-6 mx-auto mb-4 card-container hidden">
+            <div class="card h-80">
+              <div class="img-wrapper">
+                <img src="./assets/images/cafe-edgardo-700.png" class="card-img" alt="" aria-hidden="true"
+                  loading="lazy" onwaiting="" decoding="async">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Café Edgardo</h5>
+                <p class="card-text">Who doesn't like coffee in the morning? The website design and color scheme are
+                  both inspired by my love for
+                  coffee. This one's also made with vanilla JS, HTML and CSS.</p>
+                <div class='card-techs'>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class='card-links'>
+                  <a href='https://github.com/rlmrodriguez/cafe-edgardo' target='_blank'><i
+                      class='fab fa-github'></i></a>
+                  <a href='https://rlmrodriguez.github.io/cafe-edgardo/' target='_blank'><i
                       class="fas fa-external-link-alt"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section class='contact' id='contact'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-12 col-md-12 col-lg-8 mx-auto contact__text text-center'>
-          <h4><span>03. </span>What's Next?</h4>
-          <h2>Get In Touch</h2>
-          <p>
-            I'm currently looking for an opportunity to work with people who share my passion for web development. If
-            you have a question, or just want to chat, I'll try my best to get back to you!
-          </p>
-          <a href='mailto:roden.mrodriguez@gmail.com' role='button' class='btn contact__cta'>Say Hello</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class='footer'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-12 text-center'>
-          <div class='social-media'>
-            <a href='https://github.com/rlmrodriguez'><i class='fab fa-github' target='_blank'></i></a>
-            <a href='https://www.linkedin.com/in/rodenrodriguez/' target='_blank'><i
-                class='fab fa-linkedin'></i></a></i>
-          </div>
-          <div class='footer__text'>
-            <p>Created by RL Rodriguez</p>
+    <!-- Contact -->
+    <section class='contact' id='contact'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12 col-md-12 col-lg-8 mx-auto contact__text text-center'>
+            <h4><span>03. </span>What's Next?</h4>
+            <h2>Get In Touch</h2>
+            <p>
+              I'm currently looking for an opportunity to work with people who share my passion for web development. If
+              you have a question, or just want to chat, I'll try my best to get back to you!
+            </p>
+            <a href='mailto:roden.mrodriguez@gmail.com' role='button' class='btn contact__cta'>SAY HELLO</a>
           </div>
         </div>
       </div>
+    </section>
+    <footer class='footer'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-sm-12 text-center'>
+            <div class='social-media'>
+              <a href='https://github.com/rlmrodriguez'><i class='fab fa-github' target='_blank'></i></a>
+              <a href='https://www.linkedin.com/in/rodenrodriguez/' target='_blank'><i
+                  class='fab fa-linkedin'></i></a></i>
+            </div>
+            <div class='footer__text'>
+              <p>Created by RL Rodriguez</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Side Links -->
+    <div class='side-social-media'>
+      <a href='https://github.com/rlmrodriguez' target='_blank'><i class='fab fa-github'></i></a>
+      <a href='https://www.linkedin.com/in/rodenrodriguez/' target='_blank'><i class='fab fa-linkedin'></i></a></i>
     </div>
-  </footer>
 
-  <!-- Side Links -->
-  <div class='side-social-media'>
-    <a href='https://github.com/rlmrodriguez' target='_blank'><i class='fab fa-github'></i></a>
-    <a href='https://www.linkedin.com/in/rodenrodriguez/' target='_blank'><i class='fab fa-linkedin'></i></a></i>
-  </div>
-
-  <div class='side-email'>
-    <a href='mailto:roden.mrodriguez@gmail.com'>roden.mrodriguez@gmail.com</a>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
-
-  <script src=' ./script.js'>
-  </script>
-</body>
+    <div class='side-email'>
+      <a href='mailto:roden.mrodriguez@gmail.com'>roden.mrodriguez@gmail.com</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"></script>
+  </body>
 
 </html>

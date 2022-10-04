@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap');
-
 $primary: #333;
 $secondary: #64ffda;
 $font-color: #8892b0;
@@ -21,7 +17,7 @@ $paragraph-text-size: 1rem;
 body {
   background-color: $bg-color;
   color: $font-color;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -33,8 +29,9 @@ a {
 ul {
   list-style: none;
 }
+
 html {
-  font-size: 1rem;
+  font-size: calc(15px + 0.390625vw);
   scroll-behavior: smooth;
 }
 
@@ -80,6 +77,7 @@ html {
   li {
     position: relative;
   }
+
   .navbar__link::before {
     content: attr(data-number);
     position: absolute;
@@ -115,7 +113,7 @@ html {
 
   a {
     color: $secondary;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 700;
     text-decoration: none;
   }
@@ -128,7 +126,7 @@ html {
 .resume-btn {
   padding: 0.5rem 1.2rem;
   border-color: $secondary;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   letter-spacing: 0.1rem;
 
   &:hover {
@@ -190,18 +188,18 @@ html {
   align-items: center;
   min-height: 100vh;
   padding: 0 3rem;
-  // margin-top: 5rem;
 
-  h4 {
+  span {
+    display: inline-block;
     color: $secondary;
     font-size: 1rem;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     padding-bottom: 0.6rem;
   }
 
   h2 {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 700;
     color: $font-color-alt;
   }
 
@@ -218,13 +216,14 @@ html {
   }
 
   &__cta {
-    margin-top: 2rem;
-    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
     border-color: $secondary;
     color: $secondary;
     background-color: transparent;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
     transition: 0.3s;
 
     &:hover {
@@ -243,16 +242,16 @@ html {
   padding: 5rem 3rem;
 
   &__text {
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     h3 {
       font-size: $headline-text-size;
       margin-bottom: 2.4rem;
-      font-weight: bold;
+      font-weight: 700;
       color: $font-color-alt;
 
       &::after {
-        content: '';
+        content: "";
         position: relative;
         top: -15px;
         left: 12.5rem;
@@ -263,7 +262,7 @@ html {
       }
       span {
         font-size: 1rem;
-        font-family: 'Fira Code', monospace;
+        font-family: "Fira Code", monospace;
         display: inline-block;
         line-height: 1.5rem;
         vertical-align: middle;
@@ -280,11 +279,11 @@ html {
       display: flex;
       align-items: center;
       font-size: 1rem;
-      font-family: 'Fira Code', monospace;
+      font-family: "Fira Code", monospace;
       font-weight: 300;
 
       &::before {
-        content: '> ';
+        content: "> ";
         font-size: 0.7rem;
         margin-right: 0.5rem;
         color: $secondary;
@@ -309,7 +308,7 @@ html {
   height: 400px;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
@@ -329,7 +328,7 @@ html {
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 30px;
     left: 30px;
@@ -361,11 +360,11 @@ html {
     h3 {
       padding-bottom: 2rem;
       font-size: $headline-text-size;
-      font-weight: bold;
+      font-weight: 700;
       color: $font-color-alt;
 
       &::after {
-        content: '';
+        content: "";
         position: relative;
         top: -15px;
         left: 19.5rem;
@@ -376,7 +375,7 @@ html {
       }
       span {
         font-size: 1rem;
-        font-family: 'Fira Code', monospace;
+        font-family: "Fira Code", monospace;
         display: inline-block;
         line-height: 1.5rem;
         vertical-align: middle;
@@ -396,28 +395,49 @@ html {
   position: relative;
   padding-bottom: 2rem;
   transition: 0.5s;
+  border-radius: 4px;
 }
 
-.card-img-top:hover,
-.card-img-top:active {
-  opacity: 0;
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
-.card img:nth-of-type(2) {
+.img-wrapper::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 255, 218, 0.5);
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+.img-wrapper:hover::before {
+  background-color: transparent;
+  z-index: -1;
+}
+
+.card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1);
 }
 
 .card-title {
   color: $font-color-alt;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .card-body {
   background-color: #112240;
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  border-bottom-right-radius: 2rem;
+
   position: relative;
 }
 
@@ -429,7 +449,7 @@ html {
   li {
     padding-top: 0.5rem;
     padding-right: 2rem;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-size: 0.8rem;
     font-weight: 300;
     color: $secondary;
@@ -467,11 +487,11 @@ html {
       font-size: 1rem;
       margin-bottom: 1.2rem;
       color: $secondary;
-      font-family: 'Fira Code', monospace;
+      font-family: "Fira Code", monospace;
 
       span {
         font-size: 1rem;
-        font-family: 'Fira Code', monospace;
+        font-family: "Fira Code", monospace;
         display: inline-block;
         line-height: 1.5rem;
         vertical-align: middle;
@@ -483,7 +503,7 @@ html {
     h2 {
       color: $font-color-alt;
       font-size: 2.2rem;
-      font-weight: bold;
+      font-weight: 700;
       padding-bottom: 1rem;
     }
 
@@ -494,10 +514,10 @@ html {
 
   &__cta {
     margin-top: 2rem;
-    padding: 1rem 1.2rem;
+    padding: 0.7rem 1rem;
     border-color: $secondary;
     color: $secondary;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     letter-spacing: 0.1rem;
 
     &:hover {
@@ -526,11 +546,11 @@ html {
 .footer__text p {
   font-size: 0.8rem;
   margin-top: 1rem;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -10px;
     left: 50%;
@@ -553,7 +573,7 @@ html {
   visibility: hidden;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 1px;
     height: 90px;
@@ -586,7 +606,7 @@ html {
   visibility: hidden;
 
   &::after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 1px;
     height: 90px;
@@ -595,7 +615,7 @@ html {
   }
 
   a {
-    font-family: 'Fire Code', monospace;
+    font-family: "Fire Code", monospace;
     font-size: 14px;
     letter-spacing: 0.1px;
     color: $font-color;
@@ -646,7 +666,7 @@ html {
     height: 350px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 50%;
@@ -666,7 +686,7 @@ html {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 30px;
       left: 30px;
@@ -710,7 +730,7 @@ html {
     height: 350px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 50%;
@@ -730,7 +750,7 @@ html {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 30px;
       left: 30px;
@@ -747,6 +767,14 @@ html {
       top: 15px;
       left: 15px;
     }
+  }
+
+  .projects__text h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
   }
 }
 
@@ -820,17 +848,29 @@ html {
 }
 
 @media (min-width: 991px) {
-  html {
-    font-size: 1.25rem;
-  }
-
   .card-techs ul li {
     font-size: 0.65rem;
   }
 }
 
-@media (min-width: 1200px) {
-  html {
-    font-size: 1.3rem;
+// Scroll animation
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transition: 0.5s linear;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
+}
+
+.card-container:nth-child(even) {
+  transition-delay: 0.2s;
 }
